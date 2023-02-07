@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins:wght@500&family=Space+Mono&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css" />
+    <title>06-02</title>
+</head>
+
+<body>
+    <div class="main">
+        <header class="header">
+            <div class="head">
+
+                <div class="first">
+                    <h1>TODO</h1>
+
+                    <div id="theme-btn" class="moon">
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <form class="form">
+                        <input name="" id="txtId" type="text" placeholder="Create a new todo..." class="dark-theme" />
+                        <span id="error"></span>
+                    </form>
+
+                    <div class="list dark-theme">
+
+                        <div class="list-group" id="list-grp">
+                            <img src="./images/favicon-32x32.png" class="circle" onclick="select_click()" />
+                            <p id="div_table"></p>
+                            <img src="./images/icon-cross.svg" class="cross" onclick="delete_click()" />
+                        </div>
+
+                        <div class="status dark-theme">
+                            <p>5 items left</p>
+                            <p>Clear Completed</p>
+                        </div>
+                    </div>
+
+                    <div class="informations dark-theme">
+                        <p class="active" onclick="showAll_click()">All</p>
+                        <p>Active</p>
+                        <p>Completed</p>
+                    </div>
+                    <div class="info dark-theme">
+                        <p>5 items left</p>
+                        <div class="active-cont">
+                            <p class="active" onclick="showAll_click()">All</p>
+                            <p>Active</p>
+                            <p>Completed</p>
+                        </div>
+                        <p>Clear Completed</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </header>
+
+    </div>
+
+    <!-- <section>
+        <p>Drag and drop to reorder list</p>
+    </section> -->
+</body>
+<script src="./script.js"></script>
+
+</html>
