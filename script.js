@@ -42,7 +42,7 @@ function display_data() {
     `;
     for (let i = 0; i < arr_ids.length; i++) {
         my_Table += `
-        <div style="display:flex; align-items:center">      
+        <div style="display:flex; align-items:center" class="list-group">      
         <img src="./images/favicon-32x32.png" class="circle" onclick="select_click()"/>
      <p id="myData">${arr_ids[i]}</p>
      <img src="./images/icon-cross.svg" class="cross" onclick="delete_click()"/>
@@ -68,10 +68,12 @@ function delete_click() {
     }
 }
 
+// add data on input enter
 let input = document.getElementById("txtId");
 input.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
         event.preventDefault();
-        add_click()
+        add_click();
+        input.value = "";
     }
 });
