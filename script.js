@@ -36,18 +36,20 @@ function showAll_click() {
     display_data();
 }
 
+{/* <div class="check-div" onclick="select_click()"><img src="./images/icon-check.svg"  /></div> */ }
 function display_data() {
     let div_Table = document.getElementById("list-grp");
     let my_Table = `<div style="width:100%;">
     `;
     for (let i = 0; i < arr_ids.length; i++) {
         my_Table += `
-        <div style="display:flex; align-items:center" class="list-group">      
-        <img src="./images/favicon-32x32.png" class="circle" onclick="select_click()"/>
-     <p id="myData">${arr_ids[i]}</p>
-     <img src="./images/icon-cross.svg" class="cross" onclick="delete_click()"/>
-     </div>
-<hr/>       `;
+        <div style="display:flex; align-items:center;" class="list-group" >      
+            <div class="check-div"><img src="./images/icon-check.svg" /></div>
+            <p id="myData">${arr_ids[i]}</p>
+            <img src="./images/icon-cross.svg" class="cross" onclick="delete_click()"/>
+        </div>
+        <div class="hr"></div>
+        `;
     }
     my_Table += `</div>`;
     div_Table.innerHTML = my_Table;

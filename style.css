@@ -4,6 +4,22 @@
     box-sizing: border-box;
 }
 
+.active-check {
+    background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.active-check img {
+    transform: scale(1) !important;
+}
+
+.hr {
+    width: 100%;
+    background: hsl(233, 14%, 35%);
+    height: 0.9px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 .div_table {
     color: white;
 }
@@ -12,6 +28,27 @@
 #theme-btn {
     cursor: pointer;
 }
+
+.check-div {
+    width: 25px;
+    height: 22px;
+    border: 1px solid hsl(233, 14%, 35%);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    margin-right: 1rem;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.check-div img {
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+
+/* .circle {
+    height: 10px;
+} */
 
 /* Toggle Dark Theme */
 
@@ -121,21 +158,24 @@ header {
 }
 
 .form input {
-    background-color: #25273c;
+    background-color: hsl(235, 24%, 19%);
     outline: none;
     border: none;
     padding: 20px 50px;
     width: 100%;
     color: #c0c2d9;
     border-radius: 5px;
+
 }
 
 .list {
-    background-color: hsl(235, 21%, 11%);
+    /* background-color: hsl(235, 21%, 11%); */
+    background-color: hsl(235, 24%, 19%);
     width: 40%;
-    background-color: #25273c;
+    /* background-color: #25273c; */
     margin-bottom: 20px;
     border-radius: 5px;
+
 }
 
 .list-group {
@@ -143,6 +183,12 @@ header {
     align-items: center;
     padding: 0px 10px;
     justify-content: space-between;
+    background-color: hsl(235, 24%, 19%);
+
+}
+
+.list-group:hover .cross {
+    opacity: 1;
 }
 
 .list-group p {
@@ -152,12 +198,12 @@ header {
     font-size: 14px;
 }
 
-.circle {
-    padding-left: 20px;
-    height: 20px;
-}
-
 .cross {
+    background: transparent;
+    border: none;
+    outline: none;
+    opacity: 0;
+    transition: all 0.4s ease;
     height: 12px;
     padding-right: 20px;
 }
@@ -173,13 +219,14 @@ header {
 
 .info {
     padding: 20px 50px;
-    color: #c0c2d9;
     width: 40%;
     font-size: 12px;
-    background-color: #25273c;
     display: flex;
     justify-content: space-around;
     border-radius: 5px;
+    color: hsl(234, 11%, 52%);
+    background-color: hsl(235, 24%, 19%);
+
 }
 
 .active-cont {
@@ -303,9 +350,9 @@ section p {
         font-size: 12px;
     }
 
-    .circle {
-        height: 20px;
-    }
+    /* .circle {
+        height: 10px;
+    } */
 
     .cross {
         height: 12px;
