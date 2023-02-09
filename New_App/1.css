@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+.complete {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
 .active-check {
     background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
