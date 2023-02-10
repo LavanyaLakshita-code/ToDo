@@ -36,7 +36,7 @@
 
                     <div class="list dark-theme">
 
-                        <div id="list-grp">
+                        <div id="list-grp" class="list_main">
                             <p id="div_table"></p>
                         </div>
 
@@ -47,7 +47,7 @@
                     </div>
 
                     <div class="informations dark-theme">
-                        <p class="active" onclick="showAll_click()">All</p>
+                        <p class="active">All</p>
                         <p>Active</p>
                         <p>Completed</p>
                     </div>
@@ -55,12 +55,11 @@
                         <p>5 items left</p>
                         <div class="active-cont">
                             <p class="active" onclick="showAll_click()">All</p>
-                            <p>Active</p>
-                            <p>Completed</p>
+                            <p onclick="active_all()">Active</p>
+                            <p onclick="completed_all()">Completed</p>
                         </div>
                         <p>Clear Completed</p>
                     </div>
-
                 </div>
 
             </div>

@@ -19,9 +19,10 @@ if (todos) {
 function addtodo(elem) {
     // To Add ToDo
     let todoColl = document.createElement("div");
-    console.log("todoColl", todoColl);
+    // console.log("todoColl", todoColl);
+    todoColl.classList.add("todocoll");
     let todotext = text.value;
-    console.log("todotext", todotext);
+    // console.log("todotext", todotext);
     if (elem) {
         todotext = elem.text;
     }
@@ -34,7 +35,7 @@ function addtodo(elem) {
     </div>   
     <div class="hr"></div>`
         todoCon.appendChild(todoColl);
-        console.log("todoColl", todoColl);
+        // console.log("todoColl", todoColl);
         updateLs()
     }
 
@@ -51,9 +52,9 @@ function addtodo(elem) {
     let check = todoColl.querySelector(".check-div");
     check.addEventListener('click', () => {
         check.classList.toggle("active-check")
-        console.log(todoColl.children)
-        console.log(todoColl.children[0])
-        console.log(todoColl.children[0].children[1])
+        // console.log(todoColl.children)
+        // console.log(todoColl.children[0])
+        // console.log(todoColl.children[0].children[1])
         todoColl.children[0].children[1].classList.add("complete")
         updateLs()
     })
@@ -72,3 +73,61 @@ function updateLs() {
     });
     localStorage.setItem("todos", JSON.stringify(arr));
 }
+
+// when we click on active,we can only see todo which are active(not completed)
+// and when click on completed, we can see todo which are completed
+
+// let info = document.querySelectorAll(".info p")
+// console.log(info);
+let info = document.querySelectorAll(".active-cont p")
+// console.log(info);
+
+let todoli = document.querySelectorAll(".todocoll")
+// console.log(todoli);
+info.forEach(element => {
+    // console.log(element, "element");
+    element.addEventListener("click", () => {
+        info.forEach(item => {
+            item.classList.remove("active");
+        });
+        element.classList.add("active")
+
+        if (element.innerText == "Active") {
+            todoli.forEach(ele => {
+                // console.log("ele", ele.children);
+                // console.log("ele2", ele.children[0]);
+                // console.log("ele3", ele.children[0].children[1]);
+                if (!ele.children[0].children[1].classList.contains("complete")) {
+                    ele.style.display = "block";
+                } else {
+                    ele.style.display = "none";
+                }
+            })
+        } else if (element.innerText == "Completed") {
+            todoli.forEach(ele => {
+                if (ele.children[0].children[1].classList.contains("complete")) {
+                    ele.style.display = "block";
+                } else {
+                    ele.style.display = "none";
+                }
+            })
+        } else {
+            todoli.forEach(ele => {
+                ele.style.display = "block";
+            })
+        }
+    })
+})
+
+// clear all completed todo when click on clear todo
+
+let clear = document.querySelector(".clear");
+clear.addEventListener("click", () => {
+    todoli.forEach(elem => {
+        // console.log("elem", elem);
+        if (elem.children[0].children[1].classList.contains("complete")) {
+            elem.remove()
+            updateLs();
+        }
+    });
+})

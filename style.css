@@ -3,7 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+.complete {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
 .active-check {
     background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
@@ -200,6 +203,7 @@ header {
 }
 
 .cross {
+    color: white;
     background: transparent;
     border: none;
     outline: none;
@@ -356,6 +360,7 @@ section p {
     } */
 
     .cross {
+        color: white;
         height: 12px;
     }
 
