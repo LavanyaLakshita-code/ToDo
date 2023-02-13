@@ -30,7 +30,7 @@
 
                 <div class="form-group">
                     <form class="form">
-                        <input name="" id="txtId" type="text" placeholder="Create a new todo..." class="dark-theme" />
+                        <input name="" id="text" type="text" placeholder="Create a new todo..." class="dark-theme" />
                         <span id="error"></span>
                     </form>
 
@@ -41,7 +41,7 @@
                         </div>
 
                         <div class="status dark-theme">
-                            <p>5 items left</p>
+                            <!-- <p>5 items left</p> -->
                             <p>Clear Completed</p>
                         </div>
                     </div>
@@ -52,16 +52,15 @@
                         <p>Completed</p>
                     </div>
                     <div class="info dark-theme">
-                        <p>5 items left</p>
+                        <p class="left" id="count"></p>
                         <div class="active-cont">
-                            <p class="active" onclick="showAll_click()">All</p>
-                            <p onclick="active_all()">Active</p>
-                            <p onclick="completed_all()">Completed</p>
+                            <p class="active" onclick="showAll_click()" id="all">All</p>
+                            <p onclick="active_all()" id="active_co">Active</p>
+                            <p onclick="completed_all()" id="complete_cont">Completed</p>
                         </div>
-                        <p>Clear Completed</p>
+                        <p class="clear">Clear Completed</p>
                     </div>
                 </div>
-
             </div>
         </header>
 

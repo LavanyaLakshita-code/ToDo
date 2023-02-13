@@ -3,10 +3,18 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+/* .check-div:hover {
+    border-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    border-width: 1px;
+    border-style: solid;
+} */
+
 .complete {
     text-decoration: line-through;
     opacity: 0.5;
 }
+
 .active-check {
     background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
