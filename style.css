@@ -4,11 +4,19 @@
     box-sizing: border-box;
 }
 
-/* .check-div:hover {
-    border-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-    border-width: 1px;
-    border-style: solid;
-} */
+#all,
+#active_co,
+#complete_cont,
+.clear {
+    cursor: pointer;
+}
+
+.check-div:hover {
+    background: linear-gradient(hsl(235, 24%, 19%), hsl(235, 24%, 19%)) padding-box,
+        linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+    border-radius: 50em;
+    border: 2px solid transparent;
+}
 
 .complete {
     text-decoration: line-through;
@@ -196,7 +204,7 @@ header {
     padding: 0px 10px;
     justify-content: space-between;
     background-color: hsl(235, 24%, 19%);
-
+    line-break: anywhere;
 }
 
 .list-group:hover .cross {
@@ -219,6 +227,7 @@ header {
     transition: all 0.4s ease;
     height: 12px;
     padding-right: 20px;
+    cursor: pointer;
 }
 
 .status {
@@ -270,11 +279,11 @@ section p {
     display: none;
 }
 
-.informations p,
+/* .informations p,
 .info p,
 .active-cont p {
     cursor: pointer;
-}
+} */
 
 @media screen and (max-width:600px) and (min-width: 320px) {
     h1 {

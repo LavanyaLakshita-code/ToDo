@@ -1,6 +1,256 @@
+// const themeBtn = document.getElementById("theme-btn");
+// const darkTheme = document.querySelectorAll(".dark-theme");
+
+// themeBtn.onclick = () => {
+//     themeBtn.classList.toggle("sun");
+//     if (themeBtn.classList.contains("sun")) {
+//         document.body.classList.add("changeTheme");
+//         for (const theme of darkTheme) {
+//             theme.style.backgroundColor = "#ffffff";
+//             theme.style.color = "#a6a6ad";
+//         }
+//     } else {
+//         document.body.classList.remove("changeTheme");
+//         for (const theme of darkTheme) {
+//             theme.style.backgroundColor = "#25273c";
+//             theme.style.color = "#adafc6";
+//         }
+//     }
+// }
+
+// // CRUD FUNCTIONALITY
+// let arr_todo = [];
+
+// function add_click() {
+//     document.getElementById("error").innerHTML = "";
+//     let id = document.getElementById("txtId").value;
+//     if (id == "") {
+//         document.getElementById("error").innerHTML = "Please Enter Value";
+//     } else {
+//         arr_todo.push({ todo: id, selected: false });
+//         display_data();
+//     }
+//     // console.log(arr_todo, 'todo array')
+// }
+// // console.log(arr_todo, 'todo array')
+
+// function display_data() {
+//     let div_Table = document.getElementById("list-grp");
+//     let my_Table = `<div class="div_container" style="width:100%;" >
+//     `;
+//     // for (let i = 0; i < arr_todo.length; i++) {
+//     arr_todo.map((todos, i) => (
+//         my_Table += `
+//             <div  class="list-group">      
+//                 <div class="check-div" onclick="select_click(${i})"><img src="./images/icon-check.svg" /></div>
+//                 <p id="myData" class="ptag">${todos.todo}</p>
+//                 <img src="./images/close.png" class="cross" onclick=delete_click(${i}) />
+//             </div>
+//             <div class="hr"></div>const themeBtn = document.getElementById("theme-btn");
+// const darkTheme = document.querySelectorAll(".dark-theme");
+
+// themeBtn.onclick = () => {
+//     themeBtn.classList.toggle("sun");
+//     if (themeBtn.classList.contains("sun")) {
+//         document.body.classList.add("changeTheme");
+//         for (const theme of darkTheme) {
+//             theme.style.backgroundColor = "#ffffff";
+//             theme.style.color = "#a6a6ad";
+//         }
+//     } else {
+//         document.body.classList.remove("changeTheme");
+//         for (const theme of darkTheme) {
+//             theme.style.backgroundColor = "#25273c";
+//             theme.style.color = "#adafc6";
+//         }
+//     }
+// }
+
+// // CRUD FUNCTIONALITY
+// let arr_todo = [];
+
+// function add_click() {
+//     document.getElementById("error").innerHTML = "";
+//     let id = document.getElementById("txtId").value;
+//     if (id == "") {
+//         document.getElementById("error").innerHTML = "Please Enter Value";
+//     } else {
+//         arr_todo.push({ todo: id, selected: false });
+//         display_data();
+//     }
+//     // console.log(arr_todo, 'todo array')
+// }
+// // console.log(arr_todo, 'todo array')
+
+// function display_data() {
+//     let div_Table = document.getElementById("list-grp");
+//     let my_Table = `<div class="div_container" style="width:100%;" >
+//     `;
+//     // for (let i = 0; i < arr_todo.length; i++) {
+//     arr_todo.map((todos, i) => (
+//         my_Table += `
+//             <div  class="list-group">      
+//                 <div class="check-div" onclick="select_click(${i})"><img src="./images/icon-check.svg" /></div>
+//                 <p id="myData" class="ptag">${todos.todo}</p>
+//                 <img src="./images/close.png" class="cross" onclick=delete_click(${i}) />
+//             </div>
+//             <div class="hr"></div>
+//             `
+//     ));
+//     // }
+//     my_Table += `</div>`;
+//     div_Table.innerHTML = my_Table;
+// }
+
+// // delete data on delete button click
+// function delete_click(index) {
+//     arr_todo.splice(index, 1);
+//     display_data()
+// }
+
+// // add data on input enter
+// let input = document.getElementById("txtId");
+// input.addEventListener("keypress", function (event) {
+//     if (event.key === "Enter") {
+//         event.preventDefault();
+//         add_click();
+//         input.value = "";
+//     }
+// });
+
+// // // add image when click on check button
+// // // add active-check class on check button
+// function select_click(ind) {
+//     let id = document.querySelectorAll(".ptag");
+//     console.log(id[ind], "id");
+//     id[ind].classList.add("complete");
+// }
+
+// // show all todo
+// function showAll_click() {
+//     display_data();
+// }
+
+// // show todo which are completed
+// function completed_all() {
+//     let id = document.querySelectorAll(".ptag");
+//     let div_Table = document.querySelectorAll(".list-group");
+//     for (let i = 0; i <= id.length; i++) {
+//         if (id[i].classList.contains("complete")) {
+//             div_Table[i].style.display = "flex";
+//         } else {
+//             div_Table[i].style.display = "none";
+//         }
+//     }
+// }
+
+// // show todo which are active
+// function active_all() {
+//     let id = document.querySelectorAll(".ptag");
+//     let div_Table = document.querySelectorAll(".list-group");
+//     for (let i = 0; i <= id.length; i++) {
+//         if (!id[i].classList.contains("complete")) {
+//             div_Table[i].style.display = "flex";
+//         } else {
+//             div_Table[i].style.display = "none";
+//         }
+//     }
+// }
+
+
+// let clear = document.querySelector(".clear");
+// clear.addEventListener("click", () => {
+//     let id = document.querySelectorAll(".ptag");
+//     let div_Table = document.querySelectorAll(".list-group");
+//     for (let i = 0; i <= id.length; i++) {
+//         if (id[i].classList.contains("complete")) {
+//             div_Table[i].remove();
+//         }
+//     }
+// })
+
+//             `
+//     ));
+//     // }
+//     my_Table += `</div>`;
+//     div_Table.innerHTML = my_Table;
+// }
+
+// // delete data on delete button click
+// function delete_click(index) {
+//     arr_todo.splice(index, 1);
+//     display_data()
+// }
+
+// // add data on input enter
+// let input = document.getElementById("txtId");
+// input.addEventListener("keypress", function (event) {
+//     if (event.key === "Enter") {
+//         event.preventDefault();
+//         add_click();
+//         input.value = "";
+//     }
+// });
+
+// // // add image when click on check button
+// // // add active-check class on check button
+// function select_click(ind) {
+//     let id = document.querySelectorAll(".ptag");
+//     console.log(id[ind], "id");
+//     id[ind].classList.add("complete");
+// }
+
+// // show all todo
+// function showAll_click() {
+//     display_data();
+// }
+
+// // show todo which are completed
+// function completed_all() {
+//     let id = document.querySelectorAll(".ptag");
+//     let div_Table = document.querySelectorAll(".list-group");
+//     for (let i = 0; i <= id.length; i++) {
+//         if (id[i].classList.contains("complete")) {
+//             div_Table[i].style.display = "flex";
+//         } else {
+//             div_Table[i].style.display = "none";
+//         }
+//     }
+// }
+
+// // show todo which are active
+// function active_all() {
+//     let id = document.querySelectorAll(".ptag");
+//     let div_Table = document.querySelectorAll(".list-group");
+//     for (let i = 0; i <= id.length; i++) {
+//         if (!id[i].classList.contains("complete")) {
+//             div_Table[i].style.display = "flex";
+//         } else {
+//             div_Table[i].style.display = "none";
+//         }
+//     }
+// }
+
+
+// let clear = document.querySelector(".clear");
+// clear.addEventListener("click", () => {
+//     let id = document.querySelectorAll(".ptag");
+//     let div_Table = document.querySelectorAll(".list-group");
+//     for (let i = 0; i <= id.length; i++) {
+//         if (id[i].classList.contains("complete")) {
+//             div_Table[i].remove();
+//         }
+//     }
+// })
+
+
+
+
+// MAIN
+
 const themeBtn = document.getElementById("theme-btn");
 const darkTheme = document.querySelectorAll(".dark-theme");
-
+let count = document.getElementById('count')
 themeBtn.onclick = () => {
     themeBtn.classList.toggle("sun");
     if (themeBtn.classList.contains("sun")) {
@@ -21,37 +271,47 @@ themeBtn.onclick = () => {
 // CRUD FUNCTIONALITY
 let arr_todo = [];
 
-function add_click() {
+// get data from local storage
+let todos = JSON.parse(localStorage.getItem("todos"));
+if (todos) {
+    todos.forEach(element => {
+        // console.log(element,"element");
+        display_data(element);
+    });
+}
+
+// Add ToDo
+function add_todo() {
     document.getElementById("error").innerHTML = "";
-    let id = document.getElementById("txtId").value;
+    let id = document.getElementById("text").value;
     if (id == "") {
         document.getElementById("error").innerHTML = "Please Enter Value";
     } else {
         arr_todo.push({ todo: id, selected: false });
+        localStorage.setItem("todos", JSON.stringify(arr_todo));
         display_data();
     }
-    // console.log(arr_todo, 'todo array')
 }
-// console.log(arr_todo, 'todo array')
+{/* <div class="check-div ${todos ? "active-check" : ""}"  onclick="select_click(${i})"><img src="./images/icon-check.svg" /></div> */ }
 
-function display_data() {
+// display data
+function display_data(elem) {
+    console.log(elem,"elementtttttt");
     let div_Table = document.getElementById("list-grp");
-    let my_Table = `<div class="div_container" style="width:100%;" >
-    `;
-    // for (let i = 0; i < arr_todo.length; i++) {
-    arr_todo.map((todos, i) => (
+    let my_Table = `<div class="div_container" style="width:100%;" > `;
+    arr_todo.map((todos, i) => {
         my_Table += `
-            <div  class="list-group">      
-                <div class="check-div" onclick="select_click(${i})"><img src="./images/icon-check.svg" /></div>
-                <p id="myData" class="ptag">${todos.todo}</p>
+            <div class="list-group">      
+                <div class="check-div ${todos.selected ? "active-check" : ""}" onclick="select_click(${i})"><img src="./images/icon-check.svg" /></div>
+                <p id="myData" class="ptag ${todos.selected ? "complete" : ""}">${todos.todo}</p>
                 <img src="./images/close.png" class="cross" onclick=delete_click(${i}) />
             </div>
-            <div class="hr"></div>
-            `
-    ));
-    // }
+            <div class="hr"></div>`
+    }
+    );
     my_Table += `</div>`;
     div_Table.innerHTML = my_Table;
+    { arr_todo.length !== 0 ? count.innerText = `Total: ${arr_todo.length}` : "" }
 }
 
 // delete data on delete button click
@@ -61,11 +321,11 @@ function delete_click(index) {
 }
 
 // add data on input enter
-let input = document.getElementById("txtId");
+let input = document.getElementById("text");
 input.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
         event.preventDefault();
-        add_click();
+        add_todo();
         input.value = "";
     }
 });
@@ -73,50 +333,81 @@ input.addEventListener("keypress", function (event) {
 // // add image when click on check button
 // // add active-check class on check button
 function select_click(ind) {
+    let animation = document.querySelectorAll(".check-div");
     let id = document.querySelectorAll(".ptag");
-    console.log(id[ind], "id");
-    id[ind].classList.add("complete");
+    animation[ind].classList.toggle("active-check")
+    id[ind].classList.toggle("complete")
+    if (animation[ind].classList.contains("active-check") && id[ind].classList.contains("complete")) {
+        arr_todo[ind].selected = true;
+    }
 }
 
 // show all todo
 function showAll_click() {
+    let animation = document.querySelectorAll(".check-div");
+    animation.innerHTML = `<img src="./images/icon-check.svg" height="40" />`
+    let act = document.getElementById("complete_cont");
+    let all = document.getElementById("all");
+    let act2 = document.getElementById("active_co");
+    all.classList.add("active")
+    act.classList.remove("active")
+    act2.classList.remove("active")
     display_data();
 }
 
 // show todo which are completed
 function completed_all() {
-    let id = document.querySelectorAll(".ptag");
-    let div_Table = document.querySelectorAll(".list-group");
-    for (let i = 0; i <= id.length; i++) {
-        if (id[i].classList.contains("complete")) {
-            div_Table[i].style.display = "flex";
-        } else {
-            div_Table[i].style.display = "none";
-        }
-    }
+    let div_Table = document.getElementById("list-grp");
+    let act = document.getElementById("complete_cont");
+    let all = document.getElementById("all");
+    let act2 = document.getElementById("active_co");
+    act.classList.add("active")
+    all.classList.remove("active")
+    act2.classList.remove("active")
+    let completed_arr = arr_todo.filter(item => item.selected === true);
+    count.innerText = `Total: ${completed_arr.length}`
+    let completed = `<div class="div_container" style="width:100%;" >`;
+    arr_todo.map((todos, i) => {
+        if (todos.selected) (
+            completed += `
+            <div class="list-group">   
+            <p id="myData" class="ptag ${todos.selected ? "  complete" : ""}">${todos.todo}</p> 
+            </div>
+            <div class="hr"></div>
+            `)
+    })
+    completed += `</div>`;
+    div_Table.innerHTML = completed;
 }
 
 // show todo which are active
 function active_all() {
-    let id = document.querySelectorAll(".ptag");
-    let div_Table = document.querySelectorAll(".list-group");
-    for (let i = 0; i <= id.length; i++) {
-        if (!id[i].classList.contains("complete")) {
-            div_Table[i].style.display = "flex";
-        } else {
-            div_Table[i].style.display = "none";
-        }
-    }
+    let div_Table = document.getElementById("list-grp");
+    let act = document.getElementById("complete_cont");
+    let all = document.getElementById("all");
+    let act2 = document.getElementById("active_co");
+    act.classList.remove("active")
+    all.classList.remove("active")
+    act2.classList.add("active")
+
+    let active_arr = arr_todo.filter(item => item.selected !== true);
+    count.innerText = `Total: ${active_arr.length}`
+    let active = `<div class="div_container" style="width:100%;" >`;
+    active_arr.map((todos) => (
+        active += `
+            <div  class="list-group">     
+            <p id="myData" class="ptag ${todos.selected ? "complete" : ""}">${todos.todo}</p> 
+            </div>
+            <div class="hr"></div>
+            `)
+    )
+    active += `</div>`;
+    div_Table.innerHTML = active;
 }
 
-
+// clear completed
 let clear = document.querySelector(".clear");
 clear.addEventListener("click", () => {
-    let id = document.querySelectorAll(".ptag");
-    let div_Table = document.querySelectorAll(".list-group");
-    for (let i = 0; i <= id.length; i++) {
-        if (id[i].classList.contains("complete")) {
-            div_Table[i].remove();
-        }
-    }
+    arr_todo = arr_todo.filter(item => item.selected !== true);
+    display_data()
 })
